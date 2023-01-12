@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class DaireCevreAlanHesaplama {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int r,a;
+        double cevre,alan,formul;
+        double pi = 3.14;
+
+        System.out.print("Dairenin Yarı Çapını Giriniz : ");
+        r= input.nextInt();
+
+        //Yarıçapı r, merkez açısının ölçüsü 𝛼 olan daire diliminin alanı bulan programı yazınız.
+        System.out.print("Dairenin Merkez Açısını Giriniz : ");
+        a= input.nextInt();
+
+        alan = pi*r*r;
+        cevre = 2*pi*r;
+        formul = (pi*(r*r)*a)/360;
+        System.out.println("Dairenin Alanı :" + alan);
+        System.out.println("Dairenin Çevresi :" + cevre);
+        System.out.print("Daire Diliminin Alanı :" + formul);
+
+    }
+}
