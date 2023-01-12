@@ -1,0 +1,47 @@
+
+import java.util.Scanner;
+public class NotOrtalamasiHesaplama {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Değişkenleri Oluşturduk
+        int Matematik, Fizik,Kimya, Turkce, Tarih, Muzik ;
+
+        //Kullanıcı Değerleri Al
+        System.out.print("Matematik Sınav Sonucu:");
+        Matematik = input.nextInt();
+
+        System.out.print("Fizik Sınav Sonucu:");
+        Fizik = input.nextInt();
+
+        System.out.print("Kimya Sınav Sonucu:");
+        Kimya = input.nextInt();
+
+        System.out.print("Turkce Sınav Sonucu:");
+        Turkce = input.nextInt();
+
+        System.out.print("Tarih Sınav Sonucu:");
+        Tarih = input.nextInt();
+
+        System.out.print("Muzik Sınav Sonucu:");
+        Muzik = input.nextInt();
+
+
+        int top =(Matematik+Fizik+Kimya+Turkce+Tarih+Muzik);
+        double sonuc =  top / 6.0;
+        System.out.println(sonuc>=60? "Ortalama= "+ sonuc +"Sınıfı Geçti":"Ortalama= "+ sonuc +"Sınıfta Kaldı");
+
+        //2.farkli bir yol
+
+        /*
+        boolean SinifiGecti = sonuc >= 60.0;
+
+        System.out.println("Ortalamanız : " + sonuc);
+        System.out.println("Sınıf Durumunuz : " + SinifiGecti);
+
+         */
+
+
+
+    }
+}
