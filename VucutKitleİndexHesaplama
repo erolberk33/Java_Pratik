@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class VucutKitleİndexHesaplama {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double kg,m,sonc;
+
+
+        System.out.println("Boyunuzu Giriniz :" );
+        m = input.nextDouble();
+
+        System.out.println("Kilonuuz Giriniz");
+        kg = input.nextDouble();
+
+        sonc = kg / (m * m);
+
+        System.out.print("Vucut Kitle İndeksiniz :"+sonc);
+    }
+
+}
