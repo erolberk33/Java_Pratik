@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class ManavKasaProgrami {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+
+        double top,armut=2.14,elma=3.67,domates=1.11,muz=0.95,patlican=5.00,a,e,d,m,p;
+
+        System.out.print("Armut Kaç Kilo :");
+        a = inp.nextDouble();
+        a *= armut;
+        System.out.print("Elma Kaç Kilo :");
+        e = inp.nextDouble();
+        e *= elma;
+        System.out.print("Domates Kaç Kilo :");
+        d = inp.nextDouble();
+        d *= domates;
+        System.out.print("Muz Kaç Kilo :");
+        m = inp.nextDouble();
+        m *= muz;
+        System.out.print("Patlican Kaç Kilo :");
+        p = inp.nextDouble();
+        p *= patlican;
+
+        top = (a+e+d+m+p);
+
+        System.out.print("Toplam : " +top +" TL");
+
+    }
+}
