@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class TaksiMetreProgrami {
+
+    public static void main(String[] args) {
+        
+        
+        Scanner input = new Scanner(System.in);
+        
+        int mus=10,yol,sbt=20;
+        double Km = 2.20, tutar;
+        
+        System.out.print("Gidilen Mesefayi Giriniz KM Olarak :");
+        yol = input.nextInt();
+        tutar = (yol * Km)+mus;
+        System.out.println(tutar>=20? "Ödenecek Tutar :" +tutar +" TL" : "Ödenecek Tutar :" + sbt +" TL"  );
+
+    }
+}
