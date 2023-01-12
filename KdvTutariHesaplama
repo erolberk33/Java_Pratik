@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class KdvTutariHesaplama {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double Kdv = 0.18;
+        double KdvK = 0.8;
+        double tutar , KdvTutari ,KdvTutariK, KdvliTutar , KdvliTutarK ;
+        System.out.print("Ücret Tutarını Giriniz : ");
+        tutar = input.nextDouble();
+
+        KdvTutari = (tutar * Kdv);
+        KdvTutariK = (tutar * KdvK);
+        KdvliTutar = tutar + KdvTutari;
+        KdvliTutarK = tutar + KdvTutariK;
+
+        System.out.println("KDV'siz Tutar :" +tutar);
+
+        //System.out.println("KDV Oranı :" +Kdv);
+        System.out.println(tutar>=1000? "KDV Oranı :" + KdvK : "KDV Oranı :" + Kdv );
+
+
+        //System.out.println("KDV Tutarı :" +KdvTutari);
+        System.out.println(tutar>=1000? "KDV Tutarı :" + KdvTutariK : "KDV Tutarı :" + KdvTutari );
+
+        //System.out.println("KDV'li Tutarı :" +KdvliTutar +" TL");
+        System.out.println(tutar>=1000? "KDV'li Tutarı :" + KdvliTutarK : "KDV'li Tutarı :" + KdvliTutar );
+
+        //System.out.println(sonuc>=60? "Ortalama= "+ sonuc +"Sınıfı Geçti":"Ortalama= "+ sonuc +"Sınıfta Kaldı");
+    }
+
+
+
+
+
+
+}
