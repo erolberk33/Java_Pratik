@@ -1,0 +1,69 @@
+import java.util.Scanner;
+public class SinifiGecmeDurumu {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int mat,fiz,tur,kim,muz;
+        double ort;
+
+        System.out.print("Matematik Notunuzu Giriniz :");
+        mat = input.nextInt();
+
+        System.out.print("Fizik Notunuzu Giriniz :");
+        fiz = input.nextInt();
+
+        System.out.print("Türkçe Notunuzu Giriniz :");
+        tur = input.nextInt();
+
+        System.out.print("Kimya Notunuzu Giriniz :");
+        kim = input.nextInt();
+
+        System.out.print("Müzik Notunuzu Giriniz :");
+        muz = input.nextInt();
+
+        if (!(mat>0) || !(mat<=100)){
+
+            System.out.print("Matematik Notunuzu Doğru Giriniz :");
+            mat = input.nextInt();
+        }
+
+        else if (!(fiz>0) || !(fiz<=100)){
+
+            System.out.print("Fizik Notunuzu Doğru Giriniz :");
+            fiz = input.nextInt();
+        }
+
+        else if (!(tur>0) || !(tur<=100)){
+
+            System.out.print("Türkçe Notunuzu Doğru Giriniz :");
+            tur = input.nextInt();
+        }
+
+        else if (!(kim>0) || !(kim<=100)){
+
+            System.out.print("Kimya Notunuzu Doğru Giriniz :");
+            kim = input.nextInt();
+        }
+
+        else if (!(muz>0) || !(muz<=100)){
+
+            System.out.print("Müzik Notunuzu Doğru Giriniz :");
+            muz = input.nextInt();
+        }
+
+        ort = (mat+fiz+tur+kim+muz) / 5;
+
+        if (ort<55) {
+            System.out.println("Ortalamanız :" +ort);
+            System.out.print("Sınıfta Kaldınız ");
+
+        }
+
+        else if (ort>=55) {
+            System.out.println("Ortalamanız :" +ort);
+            System.out.print("Sınıfı Geçtiniz.");
+        }
+
+    }
+}
