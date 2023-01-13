@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class HesapMakinesi {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int sayi1,sayi2,select;
+
+        System.out.print("İlk Sayı Giriniz :");
+        sayi1 = input.nextInt();
+
+        System.out.print("İkinci Sayı Giriniz :");
+        sayi2 = input.nextInt();
+
+        System.out.println("1-Toplama\n2-Çıkartma\n3-Çarpma\n4-Bölme");
+        select = input.nextInt();
+
+        // switch-case ile hesap makinesi
+
+        switch (select){
+            case 1:
+                System.out.println("Toplam : " + (sayi1+sayi2));
+                break;
+            case 2:
+                System.out.println("Çıkartma : " + (sayi1-sayi2));
+                break;
+            case  3:
+                System.out.println("Çarpma : " + (sayi1*sayi2));
+                break;
+            case 4:
+                System.out.println("Bölme : " + (sayi1/sayi2));
+                break;
+            default:
+                System.out.println("Hatalı Tuşlama Tekrar Deneyiniz...");
+        }
+
+        // if else ile hesap makinesi
+        
+        /*
+        if (select == 1){
+            System.out.println("Toplam : " + (sayi1+sayi2));
+        }
+        else if (select == 2){
+            System.out.println("Çıkartma : " + (sayi1-sayi2));
+        }
+        else if (select == 3){
+            System.out.println("Çarpma : " + (sayi1*sayi2));
+        }
+        else if (select == 4){
+            System.out.println("Bölme : " + (sayi1/sayi2));
+        }
+        else {
+            System.out.println("Hatalı İşlem Tekrar Deneyiniz...");
+        }
+        */
+
+
+    }
+}
