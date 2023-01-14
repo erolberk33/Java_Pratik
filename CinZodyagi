@@ -1,0 +1,145 @@
+import java.util.Scanner;
+public class CinZodyagi {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        String burc;
+        int yil;
+
+        System.out.print("Doğum Yılınızı Giriniz :");
+        yil = input.nextInt();
+
+        // if else yapısı ile;
+        /*
+        if(yil%12 == 0)
+        {
+            burc = "Maymun";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+
+        else if(yil%12 == 1)
+        {
+            burc = "Horoz";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+
+        else if(yil%12 == 2)
+        {
+            burc = "Köpek";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+
+        else if(yil%12 == 3)
+        {
+            burc = "Domuz";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+
+        else if(yil%12 == 4)
+        {
+            burc = "Fare";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+
+        else if(yil%12 == 5)
+        {
+            burc = "Öküz";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+
+        else if(yil%12 == 6)
+        {
+            burc = "Kaplan";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+
+        else if(yil%12 == 7)
+        {
+            burc = "Tavşan";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+
+        else if(yil%12 == 8)
+        {
+            burc = "Ejderha";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+
+        else if(yil%12 == 9)
+        {
+            burc = "Yılan";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+
+        else if(yil%12 == 10)
+        {
+            burc = "At";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+
+        else if(yil%12 == 11)
+        {
+            burc = "Koyun";
+            System.out.print("Çin Zodyağı Burcunuz :" + burc);
+        }
+        */
+
+
+        // switch-case yapısı ile;
+
+        switch (yil%12){
+
+            case 0:
+                burc = "Maymun";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+            break;
+
+            case 1:
+                burc = "Horoz";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+                break;
+            case 2:
+                burc = "Köpek";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+                break;
+            case 3:
+                burc = "Domuz";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+                break;
+            case 4:
+                burc = "Fare";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+                break;
+            case 5:
+                burc = "Öküz";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+                break;
+            case 6:
+                burc = "Kaplan";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+                break;
+            case 7:
+                burc = "Tavşan";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+                break;
+            case 8:
+                burc = "Ejderha";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+                break;
+            case 9:
+                burc = "Yılan";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+                break;
+            case 10:
+                burc = "At";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+                break;
+            case 11:
+                burc = "Koyun";
+                System.out.print("Çin Zodyağı Burcunuz :" + burc);
+                break;
+        }
+
+    }
+}
