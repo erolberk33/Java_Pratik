@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class GirilenSayiKadarOlanTamBolenSayilarinOrtalamasiHesaplama {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int i, sayi, counter = 0;
+        double top = 0, sayac;
+
+
+        System.out.print("Bir Sayı Giriniz: ");
+        sayi = input.nextInt();
+
+        for(i=0; i<=sayi; i++)
+        {
+            if( (i%3==0) && (i%4==0) )
+            {
+                top+=i;
+                counter++;
+            }
+        }
+        sayac=top/counter;
+
+        System.out.println(top +"/"+counter);
+        System.out.println("Ortalama : "+sayac);
+    }
+}
+
+
