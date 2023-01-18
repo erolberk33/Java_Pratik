@@ -1,0 +1,21 @@
+import  java.util.Scanner;
+public class TekSayiToplamiBulanProgram {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int i,top=0;
+
+        do {
+            System.out.print("Sayı Giriniz :");
+            i = input.nextInt();
+            if (i % 2 == 1) {
+                top += i;
+            }
+        }
+        while (i > 0);
+
+        System.out.print("Toplam :" +top);
+
+    }
+
+}
