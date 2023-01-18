@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class GirilenSayiKadarOlanCiftSayiBulanProgram {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int sayi,i;
+
+        System.out.print("Sayı Giriniz :");
+        sayi = input.nextInt();
+
+        for (i=0; i<=sayi; i = i+2) {
+            if (i % 2 == 0 ){
+            System.out.print(i + ",");
+            }
+        }
+
+    }
+}
