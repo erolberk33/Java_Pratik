@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class GirileneKadarOlanSayilarinToplami {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int i = 0 ;
+        int top = 0;
+
+        do {
+            System.out.print("Sayı Giriniz :");
+            i = input.nextInt();
+
+            if ((i % 2 == 0)  || (i % 4 == 0)){
+                top+=i;
+            }
+
+        }
+        while (i % 2 == 0);
+
+        System.out.print("Toplam :" +top);
+
+    }
+}
