@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class UsluSayiHesaplayanProgram {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Kullanıcının girdiği değerler ile üslü sayı hesaplayan program - While Döngüsü
+
+        /*
+        int a,n;
+        int i =1;
+        int total = 1;
+
+        System.out.print("Sayı Giriniz :");
+        a = input.nextInt();
+
+        System.out.print("Üs Sayı Giriniz :");
+        n = input.nextInt();
+
+        while (i<=n){
+            total = total *a;
+            i++;
+        }
+        System.out.print("Sonuç: " + total);
+        */
+
+        // Kullanıcının girdiği değerler ile üslü sayı hesaplayan program - For Döngüsü
+
+        int a,n;
+        int total=1;
+        System.out.print("Üssü Alınacak Sayı Giriniz :");
+        a = input.nextInt();
+
+        System.out.print("Üs Olacak Sayı Giriniz :");
+        n = input.nextInt();
+
+        for (int i=1; i<=n; i++){
+
+            total =total * a;
+        }
+        System.out.print("Sonuç: "+ total);
+
+    }
+}
