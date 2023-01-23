@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class KombinasyonHesaplayanProgram {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int N,R;
+        int NFac = 1;
+        int RFac = 1;
+        int ToplamFac = 1;
+
+        System.out.print("N elemanlı bir kümenin elemanlarını Belileyiniz :");
+        N = input.nextInt();
+
+        System.out.print("R elemanlı bir kümenin elemanlarını Belileyiniz :");
+        R = input.nextInt();
+
+        for(int i=1; i<=N; i++){
+            NFac = NFac * i;
+        }
+        for(int i=1; i<=R; i++){
+            RFac = RFac * i;
+        }
+        for(int i=1; i<=N-R; i++){
+            ToplamFac = ToplamFac * i;
+        }
+
+        int sonucKombinasyon = NFac / (RFac * (ToplamFac));
+        System.out.println("Kombinasyonun Sonucu : "+sonucKombinasyon);
+        
+    }
+}
