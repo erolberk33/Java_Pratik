@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class GirilenSayiKucukKuvvetleriniBulanProgram {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+
+      //Java döngüler ile girilen sayıya kadar olan 2'nin kuvvetlerini ekrana yazdıran programı yazıyoruz.
+
+        /*
+       int s;
+       System.out.print("Bir Sayı Giriniz :");
+       s = input.nextInt();
+
+       for (int i=1; i<=s; i*=2){
+       
+           System.out.println(i);
+       }
+        System.out.print("Program Bitti...");
+*/
+
+
+        //Java döngüler ile girilen sayıya kadar olan 4 ve 5'in kuvvetlerini ekrana yazdıran programı yazıyoruz.
+
+        int sayi,d,b;
+
+        System.out.print("Sayı Giriniz :");
+        sayi = input.nextInt();
+
+
+        for(d=1; d<=sayi; d*=4){
+
+            System.out.println("4 Kuvvetleri : " +d);
+
+        }
+        for (b=1; b<=sayi; b*=5){
+            System.out.println("5 Kuvvetleri : " +b);
+        }
+        System.out.println("Program Bitti...");
+
+    }
+
+
+
+    }
