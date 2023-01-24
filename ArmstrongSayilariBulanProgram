@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class ArmstrongSayilariBulanProgram {
+    public static void main(String[] args) {
+        int number,numberOfDigrit=0,totalArmstrong=0,saveNumber;
+
+        Scanner inp=new Scanner(System.in);
+
+        System.out.print("Sayı giriniz : ");
+        number = inp.nextInt();
+
+        saveNumber=number;
+        if ((number>=100) && (number<=999)) {
+
+            while (number != 0) {
+                number /= 10;
+                numberOfDigrit++;
+            }
+
+            for (int i = 0, tempNumber = saveNumber; i < numberOfDigrit; i++) {
+                totalArmstrong += Math.pow(tempNumber % 10, numberOfDigrit);
+                tempNumber /= 10;
+            }
+
+            if (totalArmstrong == saveNumber) {
+
+                System.out.print(saveNumber + " sayısı armstrong sayıdır.");
+
+                for (int i = 0, tempNumber = saveNumber; i < saveNumber; i++) {
+                    totalArmstrong += Math.pow(tempNumber % 10, numberOfDigrit);
+                    tempNumber /= 10;
+                }
+
+            } else
+                System.out.print(saveNumber + " sayısı armstrong sayı değildir.");
+        }
+        else {
+            System.out.print("Hatalı Tuşlama Yaptınız Lütfen Tekrar Deneyiniz...");
+        }
+    }
+}
