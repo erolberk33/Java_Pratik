@@ -1,0 +1,137 @@
+import java.util.Scanner;
+
+public class ATMProjesi {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Java döngüler ile kullanıcının banka hesabını yönetebildiği bir ATM projesi - Switch-Case
+
+        String userName,passWord;
+        int hak=3;
+        int bakiye = 1500;
+        int secim;
+        while (hak > 0){
+        System.out.print("Kullanıcı Adı :");
+        userName = input.nextLine();
+        System.out.print("Şifre Giriniz :");
+        passWord = input.nextLine();
+
+        if (userName.equals("admin") && passWord.equals("1234")){
+            System.out.println("EBY BANK HOŞGELDİNİZ...");
+
+            System.out.println(" 1 - PARA YATIRMA \n 2 - PARA ÇEKME \n 3 - BAKİYE SORGULA \n 4 - ÇIKIŞ YAP");
+
+            System.out.println("Lütfen yapmak istediğiniz işlemi seçiniz :");
+            secim = input.nextInt();
+
+            switch (secim){
+
+                case 1:
+                    System.out.println("Yatırmak İstediğiniz Tutarı Giriniz :");
+                    int Ypara = input.nextInt();
+                    bakiye +=Ypara;
+                    break;
+                case 2:
+                    System.out.println("Çekmek İstediğiniz Tutarı Giriniz :");
+                    int Cpara = input.nextInt();
+                    if (Cpara < bakiye){
+                        bakiye -= Cpara;
+                    }
+                    else {
+                        System.out.println("Bakiye Yetersiz...");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Bakiye Durumunuz :" + bakiye);
+                    break;
+                /*case 4:
+                    System.out.println("Tekrar görüşmek üzere.");
+                    break;*/
+                default :
+                    //System.out.println("Hatalı Tuşlama Yaptınız Tekrar Tuşlayınız...");
+                    System.out.println("Tekrar görüşmek üzere.");
+                    
+            }
+
+        } else {
+
+            hak--;
+
+            //System.out.println("Hatalı kullanıcı adı veya şifre. Tekrar deneyiniz.");
+            if (hak == 0) {
+                System.out.println("Hesabınız bloke olmuştur lütfen banka ile iletişime geçiniz.");
+            } else {
+                System.out.println("Kalan Hakkınız : " + hak);
+            }
+        }
+        }
+
+
+
+        // Java döngüler ile kullanıcının banka hesabını yönetebildiği bir ATM projesi.
+        /*
+        int hak = 3;
+        int bakiye = 1500;
+        int secim;
+        String userName, password;
+
+        while (hak > 0) {
+        System.out.print("Kullanıcı Adı :");
+        userName = input.nextLine();
+
+        System.out.print("Şifrenizi Giriniz :");
+        password = input.nextLine();
+
+            if (userName.equals("admin") && password.equals("1234")) {
+                System.out.println("EBY BANK HOŞGELDİNİZ...");
+
+                do {
+                    System.out.println(" 1 - PARA YATIRMA \n 2 - PARA ÇEKME \n 3 - BAKİYE SORGULA \n 4 - ÇIKIŞ YAP");
+
+                    System.out.println("Lütfen yapmak istediğiniz işlemi seçiniz :");
+                    secim = input.nextInt();
+
+                    if (secim == 1) {
+                        System.out.println("Yatırmak İstediğiniz Tutar :");
+                        int para = input.nextInt();
+                        bakiye += para;
+                    } else if (secim == 2) {
+                        System.out.println("Çekmek İstediğiniz Tutar :");
+                        int para = input.nextInt();
+                        if (para < bakiye) {
+                            bakiye -= para;
+                        } else {
+                            System.out.println("Bakiye Yetersiz");
+                        }
+                    } else if (secim == 3) {
+                        System.out.println("Bakiye Durumunuz :" + bakiye);
+
+                    }
+                }
+                    while (secim != 4);
+                    System.out.println("Tekrar görüşmek üzere.");
+                    break;
+            }
+            else {
+                hak--;
+
+                System.out.println("Hatalı kullanıcı adı veya şifre. Tekrar deneyiniz.");
+
+                if (hak == 0) {
+                    System.out.println("Hesabınız bloke olmuştur lütfen banka ile iletişime geçiniz.");
+                } else {
+                    System.out.println("Kalan Hakkınız : " + hak);
+                }
+            }
+        }
+        */
+
+
+
+
+
+    }
+}
+
+
+
