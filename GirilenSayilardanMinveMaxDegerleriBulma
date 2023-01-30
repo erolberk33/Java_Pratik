@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class GirilenSayilardanMinveMaxDegerleriBulma {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+
+        //Java ile klavyeden girilen N tane sayma sayısından en büyük ve en küçük sayıları bulan ve bu sayıları ekrana yazan programı yazın.
+        
+        int adet,min=2147483647,max=-2147483648;;
+
+        System.out.print("Kaç tane sayı gireceksiniz:");
+        adet = inp.nextInt();
+
+        for (int i=1; i<=adet;i++){
+            System.out.print(i + ". Sayıyı Giriniz :");
+            int sayi = inp.nextInt();
+
+                if (sayi>max){
+                    max=sayi;
+                }
+                if (sayi<min){
+                    min=sayi;
+                }
+            }
+        System.out.println("Büyük Sayı :" +max);
+        System.out.print("Küçük Sayı :" +min);
+        }
+    }
+
