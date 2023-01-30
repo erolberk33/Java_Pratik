@@ -1,0 +1,19 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class FibonacciSerisi {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int sayi;
+        System.out.print("Fibonacci Serisinin Eleman Sayısını Giriniz :");
+        sayi = input.nextInt();
+        int [] fiboSeries=new int[sayi];
+        fiboSeries[0]=0;
+        fiboSeries[1]=1;
+        for (int i = 2; i < fiboSeries.length ; i++) {
+            fiboSeries[i]=fiboSeries[i-1]+fiboSeries[i-2];
+        }
+        System.out.println(Arrays.toString(fiboSeries));
+
+    }
+}
