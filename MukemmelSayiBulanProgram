@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class MukemmelSayiBulanProgram {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+
+       //Mükemmel Sayı Bulan Program for döngüsü
+
+        /*
+        int total=0;
+        System.out.print("Sayı Giriniz :");
+        int sayi = inp.nextInt();
+
+            for(int i=1; i<sayi; i++){
+                if (sayi % i==0){
+                    total=total+i;
+                }
+            }
+
+            if (total == sayi){
+                System.out.print( sayi+ " Mükemmel Sayıdır.");
+            }
+            else
+            {
+                System.out.print( sayi+ " Mükemmel Sayı Değildir.");
+            }
+
+         */
+
+        //Mükemmel Sayı Bulan Program while döngüsü
+
+        int i=1;
+        int total=0;
+        System.out.print("Sayı Giriniz :");
+        int sayi = inp.nextInt();
+
+        while (i<sayi){
+            if(sayi % i==0){
+                total = total+i;
+
+            }
+            i++;
+        }
+        if (total == sayi){
+            System.out.print( sayi+ " Mükemmel Sayıdır.");
+        }
+        else
+        {
+            System.out.print( sayi+ " Mükemmel Sayı Değildir.");
+        }
+    }
+}
