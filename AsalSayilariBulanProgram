@@ -1,0 +1,61 @@
+import java.util.Scanner;
+public class AsalSayilariBulanProgram {
+    public static void main(String[] args) {
+
+        Scanner inp = new Scanner(System.in);
+
+        //1-100 Arasındaki Asal Sayıları Bulan Program
+        
+        int n;
+        do {
+            System.out.print("Pozitif Bir Sayı Giriniz :");
+            n = inp.nextInt();
+        }while (n <2);
+       boolean asal=true;
+       for (int i=2; i<n;i++){
+
+            for (int j=2;j<i;j++){
+                if (!(i%j==0))asal=true;
+                else {
+                    asal=false;
+                    break;
+                }
+            }
+           if (asal) System.out.print(i+" ");
+       }
+
+
+
+
+
+        // Kullanıcının girdiği sayının asal sayı olup olmadığını bulan program
+
+        /*
+        int n,asal=0;
+
+        do {
+            System.out.print("Pozitif Bir Sayı Giriniz ;");
+            n = inp.nextInt();
+        }while (n <2);
+
+            for (int i =2; i<n;i++){
+                if (n % i == 0){
+                asal++;
+                }
+            }
+        if (asal == 0){
+            System.out.print(n + " Asal bir sayidir.");
+        }
+        else {
+            System.out.print(n + " Asal bir sayi degildir.");
+        }
+
+         */
+
+
+
+
+
+
+    }
+}
