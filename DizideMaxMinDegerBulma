@@ -1,0 +1,67 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class DizideMaxMinDegerBulma {
+    public static void main(String[] args) {
+        // 1. YOL
+        /*
+        int[] list = {56, 34, 1, 8, 101, -2, -33};
+        Scanner inp = new Scanner(System.in);
+        System.out.println("Dizi :" + Arrays.toString(list));
+        System.out.print("Bir Sayı Giriniz :");
+        int number = inp.nextInt();
+        int min = number;
+        int max = number;
+        Arrays.sort(list);
+        System.out.println("Dizi :" + Arrays.toString(list));
+
+        for (int i : list) {
+            if (i > number) {
+                max = i;
+                break;
+            }
+        }
+        for (int i = list.length - 1; i >= 0; i--) {
+            if (list[i] < number) {
+                min = list[i];
+                break;
+            }
+        }
+        System.out.println("Minimum Değer " + min);
+        System.out.println("Maximum Değer " + max);
+
+         */
+
+
+        // 2. YOL
+
+        /*
+        int[] arr = {56, 34, 1, 8, 101, -2, -33};
+        Scanner input = new Scanner(System.in);
+        System.out.print("Bir Sayı Giriniz : ");
+        int val = input.nextInt();
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+
+        int min1 = arr[0];
+        int max1 = arr[0];
+        int index;
+
+        for (int i : arr) {
+            if (val < i) {
+                max1 = i;
+                System.out.println("En yakın max değer \t= " + max1);
+
+                index = Arrays.binarySearch(arr, max1) - 1;
+                if (val != arr[index]) {
+
+                    System.out.println("En yakın min değer \t= " + arr[index]);
+                } else {
+                    System.out.println("En yakın min değer \t= " + arr[index - 1]);
+                }
+                break;
+            }
+        }
+
+         */
+    }
+}
