@@ -1,0 +1,90 @@
+import java.util.Scanner;
+public class KullaniciAlınanHarfDizilerileYildizYazdirma {
+    public static void main(String[] args) {
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Lütfen bir harf girin: ");
+            char harf = scanner.nextLine().charAt(0);
+
+            String[][] letter;
+
+            switch (Character.toUpperCase(harf)) {
+                case 'A':
+                    letter = createA();
+                    break;
+                case 'B':
+                    letter = createB();
+                    break;
+                case 'C':
+                    letter = createC();
+                    break;
+                // Diğer harflere göre şekillerin oluşturulması
+                default:
+                    System.out.println("Geçersiz harf girişi!");
+                    return;
+            }
+
+            for (String[] row : letter) {
+                for (String col : row) {
+                    System.out.print(col);
+                }
+                System.out.println();
+            }
+        }
+
+    public static String[][] createA () {
+        String[][] letter = new String[6][4];
+
+        for (int i = 0; i < letter.length; i++) {
+            for (int j = 0; j < letter[i].length; j++) {
+                if (i == 0 || i == 2) {
+                    letter[i][j] = " *";
+                } else if (j == 0 || j == 3) {
+                    letter[i][j] = " *";
+                } else {
+                    letter[i][j] = "  ";
+                }
+            }
+        }
+
+        return letter;
+    }
+
+        public static String[][] createB () {
+            String[][] letter = new String[6][4];
+
+            for (int i = 0; i < letter.length; i++) {
+                for (int j = 0; j < letter[i].length; j++) {
+                    if (i == 0 || i == 2 || i==5 ) {
+                        letter[i][j] = " * ";
+                    } else if (j == 0 || j == 3) {
+                        letter[i][j] = " * ";
+                    } else {
+                        letter[i][j] = "   ";
+                    }
+                }
+            }
+
+            return letter;
+        }
+
+        public static String[][] createC () {
+            String[][] letter = new String[6][4];
+
+            for (int i = 0; i < letter.length; i++) {
+                for (int j = 0; j < letter[i].length; j++) {
+                    if (i == 0 || i==5 ) {
+                        letter[i][j] = " * ";
+                    } else if (j == 0 ) {
+                        letter[i][j] = " * ";
+                    } else {
+                        letter[i][j] = "   ";
+                    }
+                }
+            }
+
+            return letter;
+        }
+
+        // Diğer harflere göre şekil oluşturmak için gerekli metotlar
+    }
