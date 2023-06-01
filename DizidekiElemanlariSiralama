@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class DizidekiElemanlariSiralama {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+
+        int n;
+        System.out.print("Dizinin Boyutu N :");
+         n = inp.nextInt();
+         int[] list = new int[n];
+         for (int i = 0; i< list.length;i++){
+             System.out.print("Dizinin Elemanlarını Giriniz :");
+             list[i] = inp.nextInt();
+         }
+         System.out.println("Dizi : " +Arrays.toString(list));
+         Arrays.sort(list);
+         System.out.print("Sıralı Dizi : " + Arrays.toString(list) );
+    }
+}
