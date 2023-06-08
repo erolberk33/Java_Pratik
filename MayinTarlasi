@@ -1,0 +1,149 @@
+import java.util.Scanner;
+public class MayinTarlasi {
+            private int satir;
+            private int sutun;
+            private int mayinSayisi;
+            private char[][] tahta;
+            private boolean[][] mayinlar;
+            private boolean oyunDevamEdiyor;
+
+            public MayinTarlasi(int satir, int sutun, int mayinSayisi) {
+                this.satir = satir;
+                this.sutun = sutun;
+                this.mayinSayisi = mayinSayisi;
+                tahta = new char[satir][sutun];
+                mayinlar = new boolean[satir][sutun];
+                oyunDevamEdiyor = true;
+                initializeTahta();
+                yerlestirMayinlar();
+            }
+
+            private void initializeTahta() {
+                // Tahta matrisini '-' karakteriyle doldurarak başlatıyoruz
+                for (int i = 0; i < satir; i++) {
+                    for (int j = 0; j < sutun; j++) {
+                        tahta[i][j] = '-';
+                    }
+                }
+            }
+
+            private void yerlestirMayinlar() {
+                int yerlestirilenMayinSayisi = 0;
+                while (yerlestirilenMayinSayisi < mayinSayisi) {
+                    // Rastgele bir konum seçerek mayını yerleştiriyoruz
+                    int randomSatir = (int) (Math.random() * satir);
+                    int randomSutun = (int) (Math.random() * sutun);
+                    if (!mayinlar[randomSatir][randomSutun]) {
+                        mayinlar[randomSatir][randomSutun] = true;
+                        yerlestirilenMayinSayisi++;
+                    }
+                }
+            }
+
+            public void oyna() {
+                Scanner scanner = new Scanner(System.in);
+                while (oyunDevamEdiyor) {
+                    tahtayiGoster();
+                    int satirSecimi = -1;
+                    int sutunSecimi = -1;
+                    while (satirSecimi < 0 || satirSecimi >= satir || sutunSecimi < 0 || sutunSecimi >= sutun) {
+                        // Kullanıcıdan geçerli bir konum seçmesini istiyoruz
+                        System.out.print("Satır seçin (0 - " + (satir - 1) + "): ");
+                        satirSecimi = scanner.nextInt();
+                        System.out.print("Sütun seçin (0 - " + (sutun - 1) + "): ");
+                        sutunSecimi = scanner.nextInt();
+                    }
+                    if (mayinlar[satirSecimi][sutunSecimi]) {
+                        oyunDevamEdiyor = false;
+                        System.out.println("Mayına bastınız! Oyunu kaybettiniz.");
+                        tahta[satirSecimi][sutunSecimi] = '*';
+                    } else {
+                        int komsuMayinSayisi = komsuMayinSayisiniHesapla(satirSecimi, sutunSecimi);
+                        tahta[satirSecimi][sutunSecimi] = (char) (komsuMayinSayisi + '0');
+                        if (komsuMayinSayisi == 0) {
+                            expand(satirSecimi, sutunSecimi);
+                        }
+                        if (oyunuKontrolEt()) {
+                            oyunDevamEdiyor = false;
+                            System.out.println("Tebrikler! Oyunu kazandınız.");
+                        }
+                    }
+                }
+                tahtayiGoster();
+            }
+
+            private void tahtayiGoster() {
+                // Tahtayı ekrana basarak mevcut durumu gösteriyoruz
+                for (int i = 0; i < satir; i++) {
+                    for (int j = 0; j < sutun; j++) {
+                        System.out.print(tahta[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+
+            private int komsuMayinSayisiniHesapla(int satirSecimi, int sutunSecimi) {
+                int komsuMayinSayisi = 0;
+                // Verilen hücrenin etrafındaki hücreleri kontrol ederek komşu mayın sayısını hesaplıyoruz
+                for (int i = -1; i <= 1; i++) {
+                    for (int j = -1; j <= 1; j++) {
+                        int komsuSatir = satirSecimi + i;
+                        int komsuSutun = sutunSecimi + j;
+                        if (komsuSatir >= 0 && komsuSatir < satir && komsuSutun >= 0 && komsuSutun < sutun) {
+                            if (mayinlar[komsuSatir][komsuSutun]) {
+                                komsuMayinSayisi++;
+                            }
+                        }
+                    }
+                }
+                return komsuMayinSayisi;
+            }
+
+            private void expand(int satirSecimi, int sutunSecimi) {
+                // Seçilen hücre etrafındaki boş hücreleri keşfediyoruz (genişletiyoruz)
+                for (int i = -1; i <= 1; i++) {
+                    for (int j = -1; j <= 1; j++) {
+                        int komsuSatir = satirSecimi + i;
+                        int komsuSutun = sutunSecimi + j;
+                        if (komsuSatir >= 0 && komsuSatir < satir && komsuSutun >= 0 && komsuSutun < sutun) {
+                            if (tahta[komsuSatir][komsuSutun] == '-') {
+                                int komsuMayinSayisi = komsuMayinSayisiniHesapla(komsuSatir, komsuSutun);
+                                tahta[komsuSatir][komsuSutun] = (char) (komsuMayinSayisi + '0');
+                                if (komsuMayinSayisi == 0) {
+                                    expand(komsuSatir, komsuSutun);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            private boolean oyunuKontrolEt() {
+                // Oyunun kazanılıp kazanılmadığını kontrol ediyoruz
+                // Tüm mayın olmayan hücrelerin açıldığı durumda oyun kazanılmış olur
+                for (int i = 0; i < satir; i++) {
+                    for (int j = 0; j < sutun; j++) {
+                        if (!mayinlar[i][j] && tahta[i][j] == '-') {
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
+
+            public static void main(String[] args) {
+                // Oyunu başlatmak için kullanıcıdan gerekli bilgileri alıyoruz
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Satır sayısını girin: ");
+                int satir = scanner.nextInt();
+                System.out.print("Sütun sayısını girin: ");
+                int sutun = scanner.nextInt();
+                System.out.print("Mayın sayısını girin: ");
+                int mayinSayisi = scanner.nextInt();
+
+                // Oyun nesnesini oluşturup oynamak için çağırıyoruz
+                MayinTarlasi oyun = new MayinTarlasi(satir, sutun, mayinSayisi);
+                oyun.oyna();
+            }
+        }
+
