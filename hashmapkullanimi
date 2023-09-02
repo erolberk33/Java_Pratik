@@ -48,6 +48,47 @@ public class Main {
 
         System.out.println("Rezervasyon işlemi tamamlandı.");
         scanner.close();
+
+         // b. Örnek:
+
+        // Kelime-çeviri çiftlerini saklamak için bir HashMap oluşturun
+        Map<String, String> sozluk = new HashMap<>();
+
+        // Sözlüğü doldurun (örnek çeviri çiftleri)
+        sozluk.put("merhaba", "hello");
+        sozluk.put("ev", "house");
+        sozluk.put("kitap", "book");
+        sozluk.put("kalem", "pen");
+        sozluk.put("bilgisayar", "computer");
+
+        Scanner scanner = new Scanner(System.in);
+        String devam;
+
+        do {
+            // Kullanıcıdan bir kelime girmesini isteyin
+            System.out.print("Çevirisini öğrenmek istediğiniz kelimeyi girin: ");
+            String kelime = scanner.nextLine();
+
+            // Kelimenin çevirisini bulun
+            if (sozluk.containsKey(kelime)) {
+                String ceviri = sozluk.get(kelime);
+                System.out.println(kelime + " kelimesinin çevirisi: " + ceviri);
+            } else {
+                System.out.println("Bu kelimenin çevirisi sözlükte bulunmuyor.");
+            }
+
+            // Başka bir kelimenin çevirisini öğrenmek isteyip istemediğini kullanıcıya sorun
+            System.out.print("Başka bir kelimenin çevirisini öğrenmek ister misiniz? (evet/hayır): ");
+            devam = scanner.next();
+            scanner.nextLine(); // Satır sonunu temizle
+        } while (devam.equalsIgnoreCase("evet"));
+
+        System.out.println("Sözlük uygulaması sonlandı.");
+        scanner.close();
+    }
+}
+
+
     }
 }
 
