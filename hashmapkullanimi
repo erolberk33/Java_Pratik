@@ -1,0 +1,55 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args)
+    {
+
+        // HashMap Kullanımı (HashMap Usage):
+
+        // a. Örnek:
+
+    // Oteldeki odaların durumu için bir HashMap oluşturun
+        Map<Integer, Boolean> rezervasyonlar = new HashMap<>();
+
+        // Örnek olarak 10 odalı bir otel düşünelim
+        int toplamOdaSayisi = 10;
+        for (int odaNo = 1; odaNo <= toplamOdaSayisi; odaNo++) {
+            // Başlangıçta tüm odalar müsait olduğu için true değerini atayın
+            rezervasyonlar.put(odaNo, true);
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        String devam;
+
+        do {
+            // Kullanıcıdan rezervasyon yapmak veya iptal etmek istediği oda numarasını alın
+            System.out.print("Rezervasyon yapmak veya iptal etmek istediğiniz oda numarasını girin: ");
+            int odaNo = scanner.nextInt();
+
+            // Odanın rezervasyon durumunu kontrol edin
+            if (rezervasyonlar.containsKey(odaNo)) {
+                boolean durum = rezervasyonlar.get(odaNo);
+                if (durum) {
+                    System.out.println("Oda " + odaNo + " başarıyla rezerve edildi.");
+                    rezervasyonlar.put(odaNo, false); // Odayı rezerve edin
+                } else {
+                    System.out.println("Oda " + odaNo + " zaten rezerve edilmiş.");
+                }
+            } else {
+                System.out.println("Geçersiz oda numarası.");
+            }
+
+            // Başka bir rezervasyon yapmak veya iptal etmek isteyip istemediğini kullanıcıya sorun
+            System.out.print("Başka bir rezervasyon yapmak veya iptal etmek ister misiniz? (evet/hayır): ");
+            devam = scanner.next();
+        } while (devam.equalsIgnoreCase("evet"));
+
+        System.out.println("Rezervasyon işlemi tamamlandı.");
+        scanner.close();
+    }
+}
+
+
+
