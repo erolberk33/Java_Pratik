@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        String devam;
+
+        do {
+            // Kullanıcıdan çarpım tablosu boyutunu alın
+            System.out.print("Çarpım tablosu boyutunu girin: ");
+            int boyut = scanner.nextInt();
+
+            // Çarpım tablosunu oluşturun ve ekrana yazdırın
+            for (int i = 1; i <= boyut; i++) {
+                for (int j = 1; j <= boyut; j++) {
+                    int carpim = i * j;
+                    System.out.print(carpim + "\t");
+                }
+                System.out.println(); // Her satırın sonunda yeni satıra geç
+            }
+
+            // Başka bir çarpım tablosu oluşturup oluşturmayacağını kullanıcıya sorun
+            System.out.print("Başka bir çarpım tablosu oluşturmak ister misiniz? (evet/hayır): ");
+            devam = scanner.next();
+        } while (devam.equalsIgnoreCase("evet"));
+
+        System.out.println("Program sonlandırıldı.");
+        scanner.close();
+    }
+}
