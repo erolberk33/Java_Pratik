@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args)
+    {
+        Scanner scn = new Scanner(System.in);
+
+        // Otomatik Tip Dönüşümü (Widening)
+
+        /*System.out.print("Bir Sayı Giriniz :");
+        int num = scn.nextInt();
+        // kullanıcıdan integer değeri aldık şimdi integer değerin üstü olduğu için double eşitlediğinde ınteger değerimiz ondalık oluyor
+        double ondalik = num;
+        System.out.println("İnteger değeri dobule çevirdi :" + ondalik);*/
+
+
+        // Zorunlu Tip Dönüşümü (Narrowing)
+        
+       /* double ondalik = 123.456;
+        int num = (int) ondalik;
+        System.out.println("Ondalıklı Sayı: " + ondalik);
+        System.out.println("Tamsayı: " + num);*/
+
+        // Wrapper Sınıfları ile Tip Dönüşümü
+
+        /*System.out.print("Bir Sayı Giriniz :");
+        String str = scn.nextLine();
+        int tamSayi = Integer.parseInt(str);
+        System.out.println("Dönüştürülen Tamsayı: " + tamSayi);*/
+
+
+    }
+}
