@@ -1,0 +1,82 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+      // Basit Hesaplar
+
+      /*  System.out.print("Bir Değer Giriniz :");
+        int a = scn.nextInt();
+        System.out.print("İkinci Bir Değer Giriniz :");
+        int b = scn.nextInt();
+
+        // Değerlerini aldık şimdi bunlara matematik işlerimi tanımlayacağız
+
+        int top = a+b;
+        int cikart = a-b;
+        int carp = a*b;
+        int bol = a/b;
+        int mod = a%b;
+
+        System.out.println("Toplama :" +top);
+        System.out.println("Çıkartma :" +cikart);
+        System.out.println("Çarpma  :" +carp);
+        System.out.println("Bölme :" +bol);
+        System.out.println("Mod Alma :" +mod);*/
+
+
+      // Üçgen Alan Hesaplama
+        
+       /* int taban,yukseklik,alan;
+        System.out.print(" Taban Değerini Giriniz :");
+         taban = scn.nextInt();
+        System.out.print("Yükseklik Değerini Giriniz :");
+         yukseklik = scn.nextInt();
+         
+        alan = ((taban * yukseklik)/2);
+        
+        System.out.println("Üçgenin Alanı :" + alan);*/
+
+
+      // Mantıksal İfadeler
+
+       /* System.out.print(" Taban Değerini Giriniz :");
+
+        System.out.println("Bir Sayı Giriniz :");
+        int sayi = scn.nextInt();
+
+        if (sayi < 0){
+            System.out.println("Negatif");
+        }
+        else if (sayi == 0){
+            System.out.println("Sıfır");
+        }
+        else if (sayi >= 0){
+            System.out.println("Pozitif");
+        }*/
+
+
+      // Kullanıcı Girişi ve Doğrulama
+        
+       /* String username="erol",pasword="1234";
+        String kullanici_adi, sifre;
+        System.out.println("Kullanıcı adını giriniz:");
+        kullanici_adi=scn.next();
+        System.out.println("Şifrenizi giriniz:");
+        sifre=scn.next();
+
+        if (username.equals(kullanici_adi) && pasword.equals(sifre))
+        {
+            System.out.println ("Giriş Başarılı");
+        }
+        else
+        {
+            System.out.println ("Hatalı Giriş");
+        }*/
+
+
+
+
+
+
+    }
+}
