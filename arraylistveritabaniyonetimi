@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args)
+    {
+        //Scanner scanner = new Scanner(System.in);
+
+      //  ArrayList Kullanımı (ArrayList Usage):
+
+        // a. Örnek:
+
+        /*
+        ArrayList <String> genericArrayList = new ArrayList<>();
+        genericArrayList.add("EROL");
+        genericArrayList.add("BLABLA@gmail.com");
+        genericArrayList.add("555-000");
+
+        System.out.println(genericArrayList);
+
+        genericArrayList.set(1,"blabla@gmail.com");
+        genericArrayList.set(2,"000-000-00-00");
+        System.out.println(genericArrayList);*/
+
+
+        // b. Örnek:
+/*
+
+        // Öğrenci notlarını saklamak için ArrayList oluşturun
+        ArrayList<Double> notlar = new ArrayList<>();
+
+        // Kullanıcıdan notları alın ve ArrayList'e ekleyin
+        Scanner scanner = new Scanner(System.in);
+        boolean devam = true;
+
+        while (devam) {
+            System.out.print("Notu girin (çıkmak için -1): ");
+            double not = scanner.nextDouble();
+
+            if (not == -1) {
+                devam = false;
+            } else {
+                notlar.add(not);
+            }
+        }
+
+        // Notların toplamını hesaplayın
+        double toplamNot = 0.0;
+        for (double not : notlar) {
+            toplamNot += not;
+        }
+
+        // Ortalama notu hesaplayın
+        double ortalama = notlar.size() > 0 ? toplamNot / notlar.size() : 0;
+
+        // Sonucu ekrana yazdırın
+        System.out.println("Toplam Not: " + toplamNot);
+        System.out.println("Ortalama Not: " + ortalama);
+*/
+
+  }
+}
