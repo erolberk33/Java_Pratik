@@ -28,6 +28,88 @@ public class Main {
         int tamSayi = Integer.parseInt(str);
         System.out.println("Dönüştürülen Tamsayı: " + tamSayi);*/
 
+        // Sınav Notu Hesaplayıcı:
+
+            /*System.out.print("Sınav Notunuzu Giriniz :");
+            int puan = scn.nextInt();
+
+            if (puan <50){System.out.println("Başarısız");}
+            else if (puan >= 50 && puan < 60){System.out.println("Orta");}
+            else if (puan >= 60 && puan < 70){System.out.println("İyi");}
+            else if (puan >= 70 && puan < 80){System.out.println("Çok iyi");}
+            else if (puan >= 90 && puan < 100){System.out.println("Süperrr");}*/
+
+
+        // Dört İşlem Hesaplayıcı:
+
+            /*System.out.print("1 Sayı Giriniz :");
+            int number1 = scn.nextInt();
+            System.out.print("2 Sayı Giriniz :");
+            int number2 = scn.nextInt();
+            System.out.print("İşlem Türünü Giriniz ( 1-Toplama || 2-Çıkartma || 3-Çarpma || 4-Bölme) :");
+            int value = scn.nextInt();
+
+            switch (value) {
+                case 1:
+                int top =number1+number2;
+                System.out.println("Toplam :" +top);
+                break;
+                case 2:
+                    int cik =number1-number2;
+                    System.out.println("Çıkartma :" +cik);
+                    break;
+                case 3:
+                    int carp =number1*number2;
+                    System.out.println("Çarpma :" +carp);
+                    break;
+                case 4:
+                    int bol =number1/number2;
+                    System.out.println("Toplam :" +bol);
+                    break;
+            }*/
+
+
+        // Haftanın Günleri
+
+            /*System.out.print("1 Sayı Giriniz :");
+            int number = scn.nextInt();
+
+
+            switch (number) {
+                case 1:
+                System.out.println("Pazartesi");
+                break;
+                case 2:
+                    System.out.println("Salı");
+                    break;
+                case 3:
+                    System.out.println("Çarşamba");
+                    break;
+                case 4:
+                    System.out.println("Perşembe");
+                    break;
+                case 5:
+                    System.out.println("Cuma");
+                    break;
+                case 6:
+                    System.out.println("Cumartesi");
+                    break;
+                case 7:
+                    System.out.println("Pazar");
+                    break;
+            }*/
+
+        // Ürün İndirim Hesaplayıcı
+
+        /*System.out.print("Ürün Fiyatını Giriniz :");
+        int price = scn.nextInt();
+        System.out.print("İndirim Yüzdesini Giriniz :");
+        double discount = scn.nextDouble();
+        double calculation = (price * discount) / 100;
+        double discountedAmount = price - calculation;
+
+        System.out.println("İndirimli Tutar :" +discountedAmount);*/
+
 
     }
 }
